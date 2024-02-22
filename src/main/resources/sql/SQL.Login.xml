@@ -30,4 +30,13 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		FROM lecture.member
 		WHERE member_id = #{memberId}
 	</select>
+	
+	<!-- public String findSameId(HashMap<String, String> params);
+	아이디 중복 처리를 위한 쿼리 -->
+		<select id="findSameId" parameterType="java.util.HashMap" resultType="String">
+		SELECT member_id
+		FROM lecture.member
+		WHERE member_id = #{memberId}
+	</select>
+	
 </mapper>

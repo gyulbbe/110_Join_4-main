@@ -15,4 +15,5 @@ public interface LoginDao {
 	
 	public String findPassWd(HashMap<String, String> params);
 
+	public String findSameId(HashMap<String, String> params);
 }
